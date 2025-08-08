@@ -47,7 +47,7 @@ const Index = () => {
   const jsonLd = useMemo(() => ({
     "@context": "https://schema.org",
     "@type": "Person",
-    name: "Mohin Uddin",
+    name: "Faith Olopade",
     jobTitle: "Full Stack Developer",
     url: typeof window !== "undefined" ? window.location.origin : "",
     email: "mailto:sshiponuddin22@gmail.com",
@@ -74,7 +74,7 @@ const Index = () => {
 
       <header className="container py-6">
         <nav className="flex items-center justify-between">
-          <a href="#" className="font-display text-xl">M</a>
+          <a href="#" className="font-display text-xl">FO</a>
           <div className="flex items-center gap-6 text-sm">
             <a href="#projects" className="hover:text-primary transition-colors">Projects</a>
             <a href="#about" className="hover:text-primary transition-colors">About</a>
@@ -91,7 +91,7 @@ const Index = () => {
             <div className="max-w-2xl animate-fade-in">
               <p className="text-sm text-muted-foreground mb-2">Hello I'm</p>
               <h1 className="font-display text-5xl sm:text-6xl font-bold leading-tight mb-3">
-                Mohin Uddin — Full Stack Developer
+                Faith Olopade — Full Stack Developer
               </h1>
               <h2 className="text-2xl sm:text-3xl font-semibold text-muted-foreground mb-4">
                 Full Stack Developer.
@@ -156,13 +156,13 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8 items-start">
             <img
               src="/images/portrait.jpg"
-              alt="Portrait of Mohin Uddin, Full Stack Developer"
+              alt="Portrait of Faith Olopade, Full Stack Developer"
               loading="lazy"
               className="rounded-lg border object-cover w-full h-64 md:h-full"
             />
             <div className="md:col-span-2 space-y-4">
               <p className="text-muted-foreground">
-                I’m Mohin Uddin, a passionate full stack developer focused on building clean,
+                I’m Faith Olopade, a passionate full stack developer focused on building clean,
                 scalable, and user-friendly web applications. Skilled in Python, Django,
                 JavaScript, and Tailwind CSS, I enjoy creating both the backend logic and the
                 frontend experience.
@@ -215,7 +215,7 @@ const Index = () => {
       </main>
 
       <footer className="container py-10 text-sm text-muted-foreground">
-        © {new Date().getFullYear()} Mohin Uddin · Built with React & Tailwind
+        © {new Date().getFullYear()} Faith Olopade · Built with React & Tailwind
       </footer>
     </>
   );
