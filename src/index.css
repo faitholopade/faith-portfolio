@@ -143,3 +143,29 @@ All colors MUST be HSL. */
     .spotlight::before { transition: none; }
   }
 }
+
+@layer utilities {
+  .story-link {
+    @apply relative inline-block;
+  }
+  .story-link::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    transform-origin: bottom right;
+    background: hsl(var(--primary));
+    transition: transform 300ms ease;
+  }
+  .story-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  .hover-scale { @apply transition-transform duration-200 hover:scale-105; }
+  .pulse { @apply animate-[pulse_2s_cubic-bezier(0.4,0,0.6,1)_infinite]; }
+}
+

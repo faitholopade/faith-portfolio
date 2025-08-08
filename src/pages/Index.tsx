@@ -3,13 +3,15 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Mail, Github, Linkedin } from "lucide-react";
+import { useToast } from "@/components/ui/use-toast";
 
 const skills = {
-  frontend: ["HTML", "CSS", "JavaScript", "React", "Tailwind CSS"],
-  backend: ["Python", "Django", "Flask"],
-  database: ["PostgreSQL", "SQLite"],
-  tools: ["Git", "VS Code", "Figma"],
-  cms: ["WordPress", "WooCommerce", "LiteCart"],
+  languages: ["Python", "TypeScript", "Java", "C#", ".NET"],
+  frontend: ["React", "CSS"],
+  backend: ["Node.js", "Express.js"],
+  databases: ["PostgreSQL", "SQL", "KQL"],
+  devops: ["Git", "GitHub Actions", "Docker", "Postman"],
+  cloud: ["GCP"],
 };
 
 const projects = [
@@ -43,6 +45,7 @@ const projects = [
 ];
 
 const Index = () => {
+  const { toast } = useToast();
   // SEO structured data
   const jsonLd = useMemo(() => ({
     "@context": "https://schema.org",
@@ -64,6 +67,21 @@ const Index = () => {
     window.addEventListener("pointermove", handler);
     return () => window.removeEventListener("pointermove", handler);
   }, []);
+
+  // Keyboard shortcuts and copy email
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      const k = e.key.toLowerCase();
+      if (k === "g") window.open("https://github.com/ssshiponu", "_blank");
+      if (k === "l") window.open("https://www.linkedin.com/", "_blank");
+      if (k === "e") {
+        navigator.clipboard.writeText("sshiponuddin22@gmail.com");
+        toast({ title: "Email copied", description: "sshiponuddin22@gmail.com copied to clipboard" });
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [toast]);
 
   return (
     <>
@@ -119,13 +137,7 @@ const Index = () => {
           </header>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {projects.map((p) => (
-              <Card key={p.title} className="overflow-hidden">
-                <img
-                  src={p.image}
-                  alt={`${p.title} screenshot`}
-                  loading="lazy"
-                  className="w-full h-44 object-cover"
-                />
+              <Card key={p.title} className="border hover-scale transition-shadow hover:shadow-xl">
                 <div className="p-4 space-y-3">
                   <h4 className="font-semibold text-lg">{p.title}</h4>
                   <p className="text-sm text-muted-foreground">{p.description}</p>
@@ -135,9 +147,6 @@ const Index = () => {
                     ))}
                   </div>
                   <div className="flex gap-3 pt-2">
-                    <a href={p.live} target="_blank" rel="noreferrer">
-                      <Button size="sm">Live Demo</Button>
-                    </a>
                     <a href={p.source} target="_blank" rel="noreferrer">
                       <Button variant="outline" size="sm">Source</Button>
                     </a>
@@ -204,6 +213,15 @@ const Index = () => {
             <a href="mailto:sshiponuddin22@gmail.com">
               <Button size="lg" variant="hero" className="inline-flex items-center"><Mail />Email</Button>
             </a>
+            <Button
+              variant="soft"
+              onClick={() => {
+                navigator.clipboard.writeText("sshiponuddin22@gmail.com");
+                toast({ title: "Email copied", description: "sshiponuddin22@gmail.com copied to clipboard" });
+              }}
+            >
+              Copy Email
+            </Button>
             <a href="https://github.com/ssshiponu" target="_blank" rel="noreferrer" aria-label="GitHub">
               <Button variant="soft"><Github />GitHub</Button>
             </a>
@@ -211,6 +229,7 @@ const Index = () => {
               <Button variant="outline"><Linkedin />LinkedIn</Button>
             </a>
           </div>
+          <p className="text-xs text-muted-foreground mt-3">Shortcuts: press G for GitHub, L for LinkedIn, E to copy email.</p>
         </section>
       </main>
 
