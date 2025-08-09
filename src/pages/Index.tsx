@@ -133,21 +133,6 @@ const Index = () => {
     return () => window.removeEventListener("pointermove", handler);
   }, []);
 
-  // // Keyboard shortcuts and copy email
-  // useEffect(() => {
-  //   const onKey = (e: KeyboardEvent) => {
-  //     const k = e.key.toLowerCase();
-  //     if (k === "g") window.open("https://github.com/faitholopade", "_blank");
-  //     if (k === "l") window.open("https://www.linkedin.com/in/faitholopade", "_blank");
-  //     if (k === "e") {
-  //       navigator.clipboard.writeText("sshiponuddin22@gmail.com");
-  //       toast({ title: "Email copied", description: "sshiponuddin22@gmail.com copied to clipboard" });
-  //     }
-  //   };
-  //   window.addEventListener("keydown", onKey);
-  //   return () => window.removeEventListener("keydown", onKey);
-  // }, [toast]);
-
   return (
     <>
       <script
@@ -174,7 +159,7 @@ const Index = () => {
             <div className="max-w-2xl animate-fade-in">
               <p className="text-sm text-muted-foreground mb-2">Hello I'm</p>
               <h1 className="font-display text-5xl sm:text-6xl font-bold leading-tight mb-3">
-                Faith Olopade — Full Stack Developer
+                Faith Olopade
               </h1>
               <h2 className="text-2xl sm:text-3xl font-semibold text-muted-foreground mb-4">
                 Full Stack Developer.
@@ -198,7 +183,7 @@ const Index = () => {
         <section id="projects" className="container py-16">
           <header className="mb-8">
             <h3 className="font-display text-3xl font-bold">Projects</h3>
-            <p className="text-muted-foreground mt-1">Selected work I've shipped recently.</p>
+            <p className="text-muted-foreground mt-1">A selection of projects showcasing my work in software engineering, AI, and data-driven solutions.</p>
           </header>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {projects.map((p) => (
@@ -268,7 +253,7 @@ const Index = () => {
         <section id="contact" className="container py-16">
           <header className="mb-6">
             <h3 className="font-display text-3xl font-bold">Get in Touch</h3>
-            <p className="text-muted-foreground mt-1">I’m open to freelance, full‑time and collaboration opportunities.</p>
+            <p className="text-muted-foreground mt-1">Open to full-time roles, research collaborations, and opportunities to apply my skills to meaningful challenges.</p>
           </header>
           <div className="flex flex-wrap items-center gap-4">
             <a href="mailto:olopade.faith1@gmail.com">
