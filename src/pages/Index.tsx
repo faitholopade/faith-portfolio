@@ -101,7 +101,7 @@ const projects = [
     title: "College Academic Projects",
     image: "/images/project-college.png",
     description:
-      "Comprehensive repository of academic work during my BA & MSc in Computer Science at Trinity College Dublin including compiler design, machine learning, NLP, digital logic design, computer graphics, microprocessor systems, statistical analysis, and distributed systems. Developed using languages such as Java, Python, C, C++, ARM Assembly, Verilog, VHDL, R, Haskell, and SQL, alongside frameworks including React, Spring Boot, OpenGL, Docker, and Maven.",
+      "Comprehensive repository of academic work during my BA & MSc in Computer Science at Trinity College Dublin.",
     tech: ["Java", "Python", "C++", "React", "Spring Boot", "Docker"],
     live: "",
     source: "https://github.com/faitholopade/College"
