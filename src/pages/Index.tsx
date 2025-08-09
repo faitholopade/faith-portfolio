@@ -4,7 +4,6 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Mail, Github, Linkedin } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
-import ThemeToggle from "@/components/ThemeToggle";
 
 const skills = {
   languages: [
@@ -149,7 +148,6 @@ const Index = () => {
             <a href="#about" className="hover:text-primary transition-colors">About</a>
             <a href="#skills" className="hover:text-primary transition-colors">Skills</a>
             <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
-            <ThemeToggle />
           </div>
         </nav>
       </header>
