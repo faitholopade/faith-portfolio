@@ -15,14 +15,12 @@ const skills = {
   frontend: [
     "React",
     "CSS",
-    "Web Development",
     "REST APIs"
   ],
   backend: [
     "Node.js",
     "Express.js",
-    ".NET",
-    "Microsoft Bot Framework"
+    ".NET"
   ],
   databases: [
     "PostgreSQL",
