@@ -116,7 +116,7 @@ const Index = () => {
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Faith Olopade",
-    jobTitle: "Full Stack Developer",
+    jobTitle: "Software Engineer",
     url: typeof window !== "undefined" ? window.location.origin : "",
     email: "mailto:olopade.faith1@gmail.com",
   }), []);
