@@ -16,12 +16,13 @@ const skills = {
   frontend: [
     "React",
     "CSS",
-    "REST APIs"
+    "Tailwind CSS"
   ],
   backend: [
     "Node.js",
     "Express.js",
-    ".NET"
+    ".NET",
+    "REST APIs"
   ],
   databases: [
     "PostgreSQL",
@@ -33,7 +34,7 @@ const skills = {
     "Git",
     "GitHub Actions",
     "Docker",
-    "Vim"
+    "Kubernetes"
   ],
   cloud: [
     "Microsoft Azure",
@@ -42,13 +43,21 @@ const skills = {
     "Azure DevOps Services"
   ],
   operatingSystems: [
-    "Linux"
+    "Linux",
+    "Windows"
   ],
   softwareEngineering: [
     "Algorithms",
     "Data Structures",
     "Data Analysis",
-    "Automation"
+    "Automation",
+    "Machine Learning"
+  ],
+  softSkills: [
+    "Leadership",
+    "Strategic Planning",
+    "Collaboration",
+    "Problem-Solving"
   ]
 };
 
@@ -239,7 +248,8 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-10">
             {Object.entries(skills).map(([group, items]) => (
               <div key={group}>
-                <h4 className="font-semibold mb-3 capitalize">{group}</h4>
+                <h4 className="font-semibold mb-3">
+  {group.replace(/([a-z])([A-Z])/g, "$1 $2")} </h4>
                 <div className="flex flex-wrap gap-2">
                   {items.map((s) => (
                     <Badge key={s} variant="secondary">{s}</Badge>
