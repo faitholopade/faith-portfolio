@@ -57,7 +57,7 @@ const projects = [
     image: "/images/project-ethical-ai.png",
     description:
       "Interactive web application to improve AI model compliance with the EU AI Act. Includes a dynamic Knowledge Graph of regulations, model documentation uploads, compliance scoring, and tailored recommendations.",
-    tech: ["JavaScript", "HTML", "CSS", "Knowledge Graphs"],
+    tech: ["JavaScript", "HTML", "Python", "NLP", "Docker"],
     live: "",
     source: "https://github.com/faitholopade/SWENG-Ethical-AI"
   },
@@ -66,7 +66,7 @@ const projects = [
     image: "/images/project-studybot.png",
     description:
       "Educational application that combines academic module selection with GPT to generate customised multiple-choice quizzes, supporting personalised learning and revision.",
-    tech: ["Java", "GPT API", "Swing GUI"],
+    tech: ["Java", "JavaScript", "CSS", "HTML"],
     live: "",
     source: "https://github.com/faitholopade/SWENG-Study-Bot"
   },
@@ -75,7 +75,7 @@ const projects = [
     image: "/images/project-ner.png",
     description:
       "Fine-tuned NER model to process Dell customer support logs, extracting key entities such as personal identifiers, technical issues, and hardware specifications for improved service insights.",
-    tech: ["Python", "spaCy", "Jupyter Notebook"],
+    tech: ["Python", "NLP", "Docker", "spaCy", "Flask"],
     live: "",
     source: "https://github.com/faitholopade/SWENG-Named-Entity-Recognition-Model"
   },
@@ -83,7 +83,7 @@ const projects = [
     title: "Parallel Multi-Kernel Convolution",
     image: "/images/project-parallel-convolution.png",
     description:
-      "Optimised multichannel, multikernel convolution routine in C/C++ for CNNs, leveraging OpenMP and SSE4 vector instructions for high-performance image processing on multi-core architectures.",
+      "Optimised multichannel, multikernel convolution routine in C for CNNs, leveraging OpenMP and SSE4 vector instructions for high-performance image processing on multi-core architectures.",
     tech: ["C", "OpenMP", "SSE4", "Parallel Computing"],
     live: "",
     source: "https://github.com/faitholopade/Parallel-Multi-Kernel-Convolution"
@@ -101,7 +101,7 @@ const projects = [
     title: "College Academic Projects",
     image: "/images/project-college.png",
     description:
-      "Comprehensive repository of academic work covering compiler design, machine learning, NLP, digital logic design, computer graphics, microprocessor systems, statistical analysis, and distributed systems. Developed using languages such as Java, Python, C, C++, ARM Assembly, Verilog, VHDL, R, Haskell, and SQL, alongside frameworks including React, Spring Boot, OpenGL, Docker, and Maven.",
+      "Comprehensive repository of academic work during my BA & MSc in Computer Science at Trinity College Dublin including compiler design, machine learning, NLP, digital logic design, computer graphics, microprocessor systems, statistical analysis, and distributed systems. Developed using languages such as Java, Python, C, C++, ARM Assembly, Verilog, VHDL, R, Haskell, and SQL, alongside frameworks including React, Spring Boot, OpenGL, Docker, and Maven.",
     tech: ["Java", "Python", "C++", "React", "Spring Boot", "Docker"],
     live: "",
     source: "https://github.com/faitholopade/College"
