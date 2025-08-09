@@ -142,7 +142,7 @@ const Index = () => {
 
       <header className="container py-6">
         <nav className="flex items-center justify-between">
-          <a href="#" className="font-display text-xl">FO</a>
+          <a href="#" className="font-display text-xl brand-glow">FO</a>
           <div className="flex items-center gap-6 text-sm">
             <a href="#projects" className="hover:text-primary transition-colors">Projects</a>
             <a href="#about" className="hover:text-primary transition-colors">About</a>
@@ -153,8 +153,7 @@ const Index = () => {
       </header>
 
       <main>
-        {/* Hero */}
-        <section className="spotlight">
+        <section className="spotlight spotlight-grid">
           <div className="container min-h-[60vh] grid items-center py-16">
             <div className="max-w-2xl animate-fade-in">
               <p className="text-sm text-muted-foreground mb-2">Hello I'm</p>
@@ -187,7 +186,7 @@ const Index = () => {
           </header>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {projects.map((p) => (
-              <Card key={p.title} className="border hover-scale transition-shadow hover:shadow-xl">
+              <Card key={p.title} className="border glass-card hover-scale transition-shadow hover:shadow-xl">
                 <div className="p-4 space-y-3">
                   <h4 className="font-semibold text-lg">{p.title}</h4>
                   <p className="text-sm text-muted-foreground">{p.description}</p>

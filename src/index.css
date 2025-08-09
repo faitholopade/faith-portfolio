@@ -142,12 +142,35 @@ All colors MUST be HSL. */
   @media (prefers-reduced-motion: reduce) {
     .spotlight::before { transition: none; }
   }
+
+  /* Spotlight grid enhancer: subtle grid revealed near the cursor */
+  .spotlight.spotlight-grid::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    pointer-events: none;
+    background:
+      /* vertical lines */
+      repeating-linear-gradient(
+        to right,
+        hsl(var(--foreground) / 0.06) 0 1px,
+        transparent 1px 26px
+      ),
+      /* horizontal lines */
+      repeating-linear-gradient(
+        to bottom,
+        hsl(var(--foreground) / 0.06) 0 1px,
+        transparent 1px 26px
+      );
+    -webkit-mask-image: radial-gradient(340px circle at var(--spot-x, 50%) var(--spot-y, 35%), black 0%, transparent 70%);
+    mask-image: radial-gradient(340px circle at var(--spot-x, 50%) var(--spot-y, 35%), black 0%, transparent 70%);
+    opacity: 0.9;
+  }
 }
 
 @layer utilities {
-  .story-link {
-    @apply relative inline-block;
-  }
+  .story-link { @apply relative inline-block; }
   .story-link::after {
     content: "";
     position: absolute;
@@ -160,12 +183,24 @@ All colors MUST be HSL. */
     background: hsl(var(--primary));
     transition: transform 300ms ease;
   }
-  .story-link:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-  }
+  .story-link:hover::after { transform: scaleX(1); transform-origin: bottom left; }
 
   .hover-scale { @apply transition-transform duration-200 hover:scale-105; }
   .pulse { @apply animate-[pulse_2s_cubic-bezier(0.4,0,0.6,1)_infinite]; }
+
+  /* Subtle glassy card look using design tokens */
+  .glass-card {
+    background: hsl(var(--card) / 0.7);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    box-shadow: var(--shadow-elegant);
+    border-color: hsl(var(--border) / 0.6);
+    transition: var(--transition-smooth);
+  }
+  .glass-card:hover { box-shadow: var(--shadow-glow); }
+
+  /* Gentle brand glow for logos/initials */
+  .brand-glow { transition: text-shadow 200ms ease; }
+  .brand-glow:hover { text-shadow: 0 4px 24px hsl(var(--brand) / 0.45); }
 }
 
