@@ -6,6 +6,19 @@ import { cn } from "@/lib/utils"
 // Format: { THEME_NAME: CSS_SELECTOR }
 const THEMES = { light: "", dark: ".dark" } as const
 
+// Security: allow only safe CSS color values and variable names
+const SAFE_COLOR_RE = /^(#([0-9a-fA-F]{3,8})|hsl[a]?\([^)]*\)|rgb[a]?\([^)]*\)|var\(--[a-zA-Z0-9_-]+\)|currentColor|transparent)$/
+function sanitizeCssColor(value?: string) {
+  if (!value) return null
+  const v = String(value).trim().slice(0, 100)
+  if (!SAFE_COLOR_RE.test(v)) return null
+  return v
+}
+function sanitizeVarName(name: string) {
+  const v = String(name).replace(/[^a-zA-Z0-9_-]/g, "").slice(0, 40)
+  return v || null
+}
+
 export type ChartConfig = {
   [k in string]: {
     label?: React.ReactNode
@@ -83,11 +96,14 @@ const ChartStyle = ({ id, config }: { id: string; config: ChartConfig }) => {
 ${prefix} [data-chart=${id}] {
 ${colorConfig
   .map(([key, itemConfig]) => {
-    const color =
+    const raw =
       itemConfig.theme?.[theme as keyof typeof itemConfig.theme] ||
       itemConfig.color
-    return color ? `  --color-${key}: ${color};` : null
+    const safeColor = sanitizeCssColor(raw || "")
+    const varName = sanitizeVarName(key)
+    return safeColor && varName ? `  --color-${varName}: ${safeColor};` : null
   })
+  .filter(Boolean)
   .join("\n")}
 }
 `
