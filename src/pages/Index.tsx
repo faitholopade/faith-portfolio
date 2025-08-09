@@ -274,15 +274,6 @@ const Index = () => {
             <a href="mailto:olopade.faith1@gmail.com">
               <Button size="lg" variant="hero" className="inline-flex items-center"><Mail />Email</Button>
             </a>
-            <Button
-              variant="soft"
-              onClick={() => {
-                navigator.clipboard.writeText("olopade.faith1@gmail.com");
-                toast({ title: "Email copied", description: "olopade.faith1@gmail.com copied to clipboard" });
-              }}
-            >
-              Copy Email
-            </Button>
             <a href="https://github.com/faitholopade" target="_blank" rel="noreferrer" aria-label="GitHub">
               <Button variant="soft"><Github />GitHub</Button>
             </a>
