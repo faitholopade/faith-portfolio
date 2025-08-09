@@ -118,7 +118,7 @@ const Index = () => {
     name: "Faith Olopade",
     jobTitle: "Full Stack Developer",
     url: typeof window !== "undefined" ? window.location.origin : "",
-    email: "mailto:sshiponuddin22@gmail.com",
+    email: "mailto:olopade.faith1@gmail.com",
   }), []);
 
   // Signature spotlight pointer tracking
@@ -133,20 +133,20 @@ const Index = () => {
     return () => window.removeEventListener("pointermove", handler);
   }, []);
 
-  // Keyboard shortcuts and copy email
-  useEffect(() => {
-    const onKey = (e: KeyboardEvent) => {
-      const k = e.key.toLowerCase();
-      if (k === "g") window.open("https://github.com/ssshiponu", "_blank");
-      if (k === "l") window.open("https://www.linkedin.com/", "_blank");
-      if (k === "e") {
-        navigator.clipboard.writeText("sshiponuddin22@gmail.com");
-        toast({ title: "Email copied", description: "sshiponuddin22@gmail.com copied to clipboard" });
-      }
-    };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [toast]);
+  // // Keyboard shortcuts and copy email
+  // useEffect(() => {
+  //   const onKey = (e: KeyboardEvent) => {
+  //     const k = e.key.toLowerCase();
+  //     if (k === "g") window.open("https://github.com/faitholopade", "_blank");
+  //     if (k === "l") window.open("https://www.linkedin.com/in/faitholopade", "_blank");
+  //     if (k === "e") {
+  //       navigator.clipboard.writeText("sshiponuddin22@gmail.com");
+  //       toast({ title: "Email copied", description: "sshiponuddin22@gmail.com copied to clipboard" });
+  //     }
+  //   };
+  //   window.addEventListener("keydown", onKey);
+  //   return () => window.removeEventListener("keydown", onKey);
+  // }, [toast]);
 
   return (
     <>
@@ -180,7 +180,7 @@ const Index = () => {
                 Full Stack Developer.
               </h2>
               <p className="text-muted-foreground mb-8">
-                Modern custom web app and e-commerce development specialist.
+                MSc Computer Science student at Trinity College Dublin with experience in full-stack development, AI, data analytics, and automation. I build thoughtful, scalable solutions that blend functionality with long-term impact.
               </p>
               <div className="flex gap-3">
                 <a href="#projects">
@@ -236,14 +236,10 @@ const Index = () => {
             />
             <div className="md:col-span-2 space-y-4">
               <p className="text-muted-foreground">
-                I’m Faith Olopade, a passionate full stack developer focused on building clean,
-                scalable, and user-friendly web applications. Skilled in Python, Django,
-                JavaScript, and Tailwind CSS, I enjoy creating both the backend logic and the
-                frontend experience.
+                I’m a Computer Science MSc student at Trinity College Dublin, driven by a passion for learning, problem-solving, and exploring how technology can address real-world challenges. My interests include software engineering, artificial intelligence, data, cybersecurity, and the ethical and societal impacts of emerging technologies.
               </p>
               <p className="text-muted-foreground">
-                Whether it’s developing e‑commerce solutions, chatbots, creative portfolio sites,
-                or educational tools, I aim to blend functionality with thoughtful design.
+                I have over two years of technical experience through internships with Microsoft and Intel, spanning AI, ML, verification, automation, and data tooling. I enjoy research, development, and building practical, impactful solutions.
               </p>
             </div>
           </div>
@@ -275,26 +271,25 @@ const Index = () => {
             <p className="text-muted-foreground mt-1">I’m open to freelance, full‑time and collaboration opportunities.</p>
           </header>
           <div className="flex flex-wrap items-center gap-4">
-            <a href="mailto:sshiponuddin22@gmail.com">
+            <a href="mailto:olopade.faith1@gmail.com">
               <Button size="lg" variant="hero" className="inline-flex items-center"><Mail />Email</Button>
             </a>
             <Button
               variant="soft"
               onClick={() => {
-                navigator.clipboard.writeText("sshiponuddin22@gmail.com");
-                toast({ title: "Email copied", description: "sshiponuddin22@gmail.com copied to clipboard" });
+                navigator.clipboard.writeText("olopade.faith1@gmail.com");
+                toast({ title: "Email copied", description: "olopade.faith1@gmail.com copied to clipboard" });
               }}
             >
               Copy Email
             </Button>
-            <a href="https://github.com/ssshiponu" target="_blank" rel="noreferrer" aria-label="GitHub">
+            <a href="https://github.com/faitholopade" target="_blank" rel="noreferrer" aria-label="GitHub">
               <Button variant="soft"><Github />GitHub</Button>
             </a>
-            <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/faitholopade" target="_blank" rel="noreferrer" aria-label="LinkedIn">
               <Button variant="outline"><Linkedin />LinkedIn</Button>
             </a>
           </div>
-          <p className="text-xs text-muted-foreground mt-3">Shortcuts: press G for GitHub, L for LinkedIn, E to copy email.</p>
         </section>
       </main>
 
