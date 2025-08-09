@@ -51,37 +51,63 @@ const skills = {
   ]
 };
 
-
-
 const projects = [
   {
-    title: "Fashion E-commerce website",
-    image: "/images/project-ecommerce.jpg",
+    title: "Creating Trustworthy and Ethical AI",
+    image: "/images/project-ethical-ai.png",
     description:
-      "Ecommerce website built with WordPress and WooCommerce for easy product management and secure payments.",
-    tech: ["WordPress", "WooCommerce"],
-    live: "http://shipon.lovestoblog.com/",
-    source: "https://github.com/",
+      "Interactive web application to improve AI model compliance with the EU AI Act. Includes a dynamic Knowledge Graph of regulations, model documentation uploads, compliance scoring, and tailored recommendations.",
+    tech: ["JavaScript", "HTML", "CSS", "Knowledge Graphs"],
+    live: "",
+    source: "https://github.com/faitholopade/SWENG-Ethical-AI"
   },
   {
-    title: "AI Chatbot",
-    image: "/images/project-chatbot.png",
+    title: "Study Bot",
+    image: "/images/project-studybot.png",
     description:
-      "Shipon AI, an advanced chatbot offering real-time answers and smart interactions.",
-    tech: ["HTML", "CSS", "JavaScript", "Tailwind"],
-    live: "https://shiponai.netlify.app/",
-    source: "https://github.com/ssshiponu/ai-chatbot",
+      "Educational application that combines academic module selection with GPT to generate customised multiple-choice quizzes, supporting personalised learning and revision.",
+    tech: ["Java", "GPT API", "Swing GUI"],
+    live: "",
+    source: "https://github.com/faitholopade/SWENG-Study-Bot"
   },
   {
-    title: "College Website",
+    title: "Named Entity Recognition Model for Customer Support",
+    image: "/images/project-ner.png",
+    description:
+      "Fine-tuned NER model to process Dell customer support logs, extracting key entities such as personal identifiers, technical issues, and hardware specifications for improved service insights.",
+    tech: ["Python", "spaCy", "Jupyter Notebook"],
+    live: "",
+    source: "https://github.com/faitholopade/SWENG-Named-Entity-Recognition-Model"
+  },
+  {
+    title: "Parallel Multi-Kernel Convolution",
+    image: "/images/project-parallel-convolution.png",
+    description:
+      "Optimised multichannel, multikernel convolution routine in C/C++ for CNNs, leveraging OpenMP and SSE4 vector instructions for high-performance image processing on multi-core architectures.",
+    tech: ["C", "OpenMP", "SSE4", "Parallel Computing"],
+    live: "",
+    source: "https://github.com/faitholopade/Parallel-Multi-Kernel-Convolution"
+  },
+  {
+    title: "Zebra Puzzle Solver",
+    image: "/images/project-zebra.png",
+    description:
+      "Constraint programming solution to the classic Zebra puzzle, demonstrating logical reasoning, constraint satisfaction techniques, and Java-based solver implementation.",
+    tech: ["Java", "Constraint Programming"],
+    live: "",
+    source: "https://github.com/faitholopade/Zebra-Puzzle-Solver"
+  },
+  {
+    title: "College Academic Projects",
     image: "/images/project-college.png",
     description:
-      "A modern, responsive Django + Tailwind website with dynamic content and event listings.",
-    tech: ["Django", "Tailwind", "SQLite"],
-    live: "https://dhamraigovtcollege.pythonanywhere.com/",
-    source: "https://github.com/ssshiponu/college-website",
-  },
+      "Comprehensive repository of academic work covering compiler design, machine learning, NLP, digital logic design, computer graphics, microprocessor systems, statistical analysis, and distributed systems. Developed using languages such as Java, Python, C, C++, ARM Assembly, Verilog, VHDL, R, Haskell, and SQL, alongside frameworks including React, Spring Boot, OpenGL, Docker, and Maven.",
+    tech: ["Java", "Python", "C++", "React", "Spring Boot", "Docker"],
+    live: "",
+    source: "https://github.com/faitholopade/College"
+  }
 ];
+
 
 const Index = () => {
   const { toast } = useToast();
