@@ -6,13 +6,92 @@ import { Mail, Github, Linkedin } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
 
 const skills = {
-  languages: ["Python", "TypeScript", "Java", "C#", ".NET"],
-  frontend: ["React", "CSS"],
-  backend: ["Node.js", "Express.js"],
-  databases: ["PostgreSQL", "SQL", "KQL"],
-  devops: ["Git", "GitHub Actions", "Docker", "Postman"],
-  cloud: ["GCP"],
+  languages: [
+    "Python",
+    "TypeScript",
+    "Java",
+    "C#",
+    "C++",
+    "SystemVerilog",
+    "Scratch"
+  ],
+  frontend: [
+    "React",
+    "CSS",
+    "Web Development"
+  ],
+  backend: [
+    "Node.js",
+    "Express.js",
+    ".NET",
+    "REST APIs",
+    "Microsoft Bot Framework"
+  ],
+  databases: [
+    "PostgreSQL",
+    "SQL",
+    "KQL",
+    "Azure Cosmos DB",
+    "Azure Data Explorer"
+  ],
+  devtools: [
+    "Git",
+    "GitHub Actions",
+    "Docker",
+    "Postman",
+    "Kubernetes",
+    "Grafana",
+    "Azure DevOps Services",
+    "Vim",
+    "Processing.org",
+    "Airtable"
+  ],
+  cloud: [
+    "Google Cloud Platform (GCP)",
+    "Microsoft Azure",
+    "Azure AI Foundry"
+  ],
+  operatingSystems: [
+    "Linux"
+  ],
+  softwareEngineering: [
+    "Algorithms",
+    "Data Structures",
+    "Data Analysis",
+    "Debugging",
+    "Object-Oriented Programming (OOP)",
+    "Automation",
+    "Scripting",
+    "Software Development Life Cycle (SDLC)",
+    "Software Observability",
+    "DataOps",
+    "Model Context Protocol (MCP)",
+    "Secure Future Initiative",
+    "SCOPE",
+    "COSMOS",
+    "GitHub Copilot",
+    "Microsoft Power Automate"
+  ],
+  verification: [
+    "Universal Verification Methodology (UVM)",
+    "Virtual Network Computing (VNC)"
+  ],
+  tradingAndFinance: [
+    "Market Making",
+    "Bayesian Updating",
+    "Quantitative Trading"
+  ],
+  businessAndLeadership: [
+    "Technical Support",
+    "Operations Management",
+    "Strategic Planning",
+    "Leadership",
+    "Training & Development",
+    "Customer Relationship Management (CRM)",
+    "System Configuration"
+  ]
 };
+
 
 const projects = [
   {
