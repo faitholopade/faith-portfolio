@@ -248,8 +248,9 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-10">
             {Object.entries(skills).map(([group, items]) => (
               <div key={group}>
-                <h4 className="font-semibold mb-3">
-  {group.replace(/([a-z])([A-Z])/g, "$1 $2")} </h4>
+               <h4 className="font-semibold mb-3">
+  {group.replace(/([a-z])([A-Z])/g, "$1 $2")
+        .replace(/\b\w/g, (char) => char.toUpperCase())} </h4>
                 <div className="flex flex-wrap gap-2">
                   {items.map((s) => (
                     <Badge key={s} variant="secondary">{s}</Badge>
