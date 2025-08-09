@@ -10,46 +10,37 @@ const skills = {
     "Python",
     "TypeScript",
     "Java",
-    "C#",
-    "C++",
-    "SystemVerilog",
-    "Scratch"
+    "C#"
   ],
   frontend: [
     "React",
     "CSS",
-    "Web Development"
+    "Web Development",
+    "REST APIs"
   ],
   backend: [
     "Node.js",
     "Express.js",
     ".NET",
-    "REST APIs",
     "Microsoft Bot Framework"
   ],
   databases: [
     "PostgreSQL",
     "SQL",
     "KQL",
-    "Azure Cosmos DB",
-    "Azure Data Explorer"
+    "Azure Cosmos DB"
   ],
   devtools: [
     "Git",
     "GitHub Actions",
     "Docker",
-    "Postman",
-    "Kubernetes",
-    "Grafana",
-    "Azure DevOps Services",
-    "Vim",
-    "Processing.org",
-    "Airtable"
+    "Vim"
   ],
   cloud: [
-    "Google Cloud Platform (GCP)",
     "Microsoft Azure",
-    "Azure AI Foundry"
+    "Google Cloud Platform (GCP)",
+    "Azure AI Foundry",
+    "Azure DevOps Services"
   ],
   operatingSystems: [
     "Linux"
@@ -58,39 +49,10 @@ const skills = {
     "Algorithms",
     "Data Structures",
     "Data Analysis",
-    "Debugging",
-    "Object-Oriented Programming (OOP)",
-    "Automation",
-    "Scripting",
-    "Software Development Life Cycle (SDLC)",
-    "Software Observability",
-    "DataOps",
-    "Model Context Protocol (MCP)",
-    "Secure Future Initiative",
-    "SCOPE",
-    "COSMOS",
-    "GitHub Copilot",
-    "Microsoft Power Automate"
-  ],
-  verification: [
-    "Universal Verification Methodology (UVM)",
-    "Virtual Network Computing (VNC)"
-  ],
-  tradingAndFinance: [
-    "Market Making",
-    "Bayesian Updating",
-    "Quantitative Trading"
-  ],
-  businessAndLeadership: [
-    "Technical Support",
-    "Operations Management",
-    "Strategic Planning",
-    "Leadership",
-    "Training & Development",
-    "Customer Relationship Management (CRM)",
-    "System Configuration"
+    "Automation"
   ]
 };
+
 
 
 const projects = [
