@@ -121,6 +121,8 @@ All colors MUST be HSL. */
     background-image: var(--gradient-soft);
   }
 
+  .dark body { background-image: none; }
+
   /* Display font helper */
   .font-display { font-family: var(--font-display, ui-sans-serif, system-ui); }
 
